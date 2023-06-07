@@ -1,0 +1,22 @@
+@import './../../variables';
+
+:host {
+  @apply flex gap-[5px];
+
+  &:hover {
+    background-color:$color-primary-dark;
+    padding-left: 5px;
+  }
+}
+
+:host.selected {
+  background-color: $color-primary;
+}
+
+.task-name.completed {
+  text-decoration: line-through;
+}
+
+.task-description {
+ color: grey;
+}

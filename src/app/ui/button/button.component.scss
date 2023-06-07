@@ -1,0 +1,30 @@
+@import '../../../variables';
+
+.btn-base {
+  padding: $btn-py $btn-px;
+  border-radius: $border-radius;
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+}
+  
+.btn-full {
+  border: $btn-line-width solid $color-primary;
+  background-color: $color-primary;
+  color: $color-bg;
+
+  &:hover {
+    border: $btn-line-width solid $color-primary-dark;
+  }
+}
+  
+.btn-ghost {
+  border: $btn-line-width solid $color-primary;
+  color: $color-primary;
+
+  &:hover {
+    border: $btn-line-width solid $color-primary-dark;
+    color: $color-bg;
+  }
+}

@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+@import './variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @apply text-[14px] font-light;
+  font-family: 'Poppins', serif;
+
+  background-color: $color-bg;
+  color: $color-black;
+}
+
+input[type=text],
+input[type=password],
+textarea {
+  padding: $btn-py $btn-px;
+
+  outline: none;
+  border: none;
+
+  border-radius: $border-radius;
+
+  background-color: $color-bg-dark;
+  resize: vertical;
+
+  &::placeholder {
+    color: $color-placeholder;
+  }
+}
+
+input[type=checkbox] {
+  accent-color: $color-primary;
+}

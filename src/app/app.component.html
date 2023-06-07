@@ -1,0 +1,10 @@
+<form class="addTask" (submit)="addTask(name.value,description.value); false;">
+  <input type="text" placeholder="name" required #name>
+  <input type="text" placeholder="description" required #description>
+  <app-button-full [type]="'submit'">add task</app-button-full>
+</form>
+
+<div class="tasks">
+  <app-task *ngFor="let task of tasks.reverse()" [task]="task" (selectedTask)="onSelect($event)"
+    [class.selected]="task === selectedTask"></app-task>
+</div>
