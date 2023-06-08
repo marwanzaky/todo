@@ -17,8 +17,8 @@ body {
   @apply text-[14px] font-light;
   font-family: 'Poppins', serif;
 
-  background-color: $color-bg;
-  color: $color-black;
+  background-color: var(--color-bg);
+  color: var(--color-black);
 }
 
 input[type=text],
@@ -31,14 +31,14 @@ textarea {
 
   border-radius: $border-radius;
 
-  background-color: $color-bg-dark;
+  background-color: var(--color-bg-dark);
   resize: vertical;
 
   &::placeholder {
-    color: $color-placeholder;
+    color: var(--color-placeholder);
   }
 }
 
 input[type=checkbox] {
-  accent-color: $color-primary;
+  accent-color: var(--color-primary);
 }

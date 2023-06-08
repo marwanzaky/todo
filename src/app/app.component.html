@@ -1,3 +1,8 @@
+<div class="flex gap-x-[5px]">
+  <input id="dark-mode" type="checkbox" [(ngModel)]="darkMode" (change)="onDarkModeChange()">
+  <label for="dark-mode">Dark mode</label>
+</div>
+
 <h1>Inbox</h1>
 
 <form class="addTask" [formGroup]="addTaskForm" (ngSubmit)="addTask()">

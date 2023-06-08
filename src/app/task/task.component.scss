@@ -6,12 +6,12 @@
 
   &:hover {
     @apply pl-[5px];
-    background-color:$color-primary-light;
+    background-color: var(--color-primary-light);
   }
 
   &.selected {
     @apply pl-[5px];
-    background-color: $color-primary;
+    background-color: var(--color-primary);
   }
 }
 
