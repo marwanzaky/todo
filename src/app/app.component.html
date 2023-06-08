@@ -1,17 +1,2 @@
-<div class="flex gap-x-[5px]">
-  <input id="dark-mode" type="checkbox" [(ngModel)]="darkMode" (change)="onDarkModeChange()">
-  <label for="dark-mode">Dark mode</label>
-</div>
-
-<h1>Inbox</h1>
-
-<form class="addTask" [formGroup]="addTaskForm" (ngSubmit)="addTask()">
-  <input id="name" type="text" placeholder="Name" formControlName="name">
-  <input id="description" type="text" placeholder="Description" formControlName="description">
-  <app-button-full [type]="'submit'" [disabled]="addTaskForm.invalid">Add task</app-button-full>
-</form>
-
-<div class="tasks">
-  <app-task *ngFor="let task of tasks.reverse()" [task]="task" (selectedTask)="onSelect($event)"
-    [class.selected]="task === selectedTask"></app-task>
-</div>
+<app-menu></app-menu>
+<app-main></app-main>

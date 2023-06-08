@@ -17,8 +17,8 @@ body {
   @apply text-[14px] font-light;
   font-family: 'Poppins', serif;
 
-  background-color: var(--color-bg);
-  color: var(--color-black);
+  background-color: var(--color-grey-100);
+  color: var(--color-grey-900);
 }
 
 input[type=text],
@@ -31,7 +31,7 @@ textarea {
 
   border-radius: $border-radius;
 
-  background-color: var(--color-bg-dark);
+  background-color: var(--color-grey-200);
   resize: vertical;
 
   &::placeholder {

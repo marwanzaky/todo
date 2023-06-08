@@ -9,6 +9,7 @@ import { Task } from '../task';
 })
 export class TaskComponent {
   @Input() task?: Task;
+  @Input() currentTask?: Task;
   @Output() selectedTask = new EventEmitter<Task>();
 
   @HostListener('click')

@@ -9,6 +9,17 @@
   
   --color-black: #3d3d3d;
 
+  // COLOR GREY
+  --color-grey-100: #F7FAFC;
+  --color-grey-200: #EDF2F7;
+  --color-grey-300: #E2E8F0;
+  --color-grey-400: #CBD5E0;
+  --color-grey-500: #A0AEC0;
+  --color-grey-600: #718096;
+  --color-grey-700: #4A5568;
+  --color-grey-800: #2D3748;
+  --color-grey-900: #1A202C;
+
   // COLOR ADVANCE
   --color-placeholder: grey;
 }
@@ -18,14 +29,25 @@
   --color-bg: #1e1e1e;
   --color-bg-dark: #343434;
   
-  --color-primary-light: #86b9ec;
-  --color-primary: #2e86de;
-  --color-primary-dark: #2e86de;
+  --color-primary-light: #17538f;   // +12
+  --color-primary: #2f86dd;         // +6
+  --color-primary-dark: #86b9ec;    // 0
   
   --color-black: white;
 
+  // COLOR GREY
+  --color-grey-100: #1A202C;
+  --color-grey-200: #2D3748;
+  --color-grey-300: #4A5568;
+  --color-grey-400: #718096;
+  --color-grey-500: #A0AEC0;
+  --color-grey-600: #CBD5E0;
+  --color-grey-700: #E2E8F0;
+  --color-grey-800: #EDF2F7;
+  --color-grey-900: #F7FAFC;
+
   // COLOR ADVANCE
-  --color-placeholder: #E6DDC4;
+  --color-placeholder: rgb(230, 230, 230);
 }
 
 // BUTTON SETTINGS

@@ -1,4 +1,11 @@
-<input type="checkbox" [(ngModel)]="task!.completed">
+<div class="div-checkbox" *ngIf="task">
+    <input class="checkbox" type="checkbox" [(ngModel)]="task.completed">
+</div>
 
-<div class="name" [class.completed]="task!.completed">{{task!.name}}</div>
-<!-- <div class="description" [class.completed]="task!.completed">{{task?.description}}</div> -->
+<div class="div-task" *ngIf="task">
+    <input class="name" type="text" [class.completed]="task.completed" [(ngModel)]="task.name" placeholder="Name">
+
+    <textarea class="description" *ngIf="task===currentTask" [class.completed]="task.completed"
+        [(ngModel)]="task.description" placeholder="Description"
+        oninput='this.style.height="auto"; this.style.height = this.scrollHeight + "px"'></textarea>
+</div>

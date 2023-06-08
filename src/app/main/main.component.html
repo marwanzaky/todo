@@ -1,0 +1,15 @@
+<div class="w-[500px]">
+    <div class="flex gap-x-[5px]">
+        <input id="dark-mode" type="checkbox" [(ngModel)]="darkMode" (change)="onDarkModeChange()">
+        <label for="dark-mode">Dark mode</label>
+    </div>
+
+    <h1>Inbox</h1>
+
+    <app-add-task></app-add-task>
+
+    <div class="tasks">
+        <app-task *ngFor="let task of tasks.reverse()" [task]="task" [currentTask]="selectedTask"
+            (selectedTask)="onSelect($event)" [class.selected]="task === selectedTask"></app-task>
+    </div>
+</div>

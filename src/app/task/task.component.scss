@@ -1,7 +1,7 @@
 @import './../../variables';
 
 :host {
-  @apply p-[0px] flex gap-[5px];
+  @apply flex gap-[5px];
   border-radius: $border-radius;
 
   &:hover {
@@ -10,11 +10,35 @@
   }
 
   &.selected {
-    @apply pl-[5px];
-    background-color: var(--color-primary);
+    @apply pl-[5px] pb-[5px] pr-[5px];
+    background-color: var(--color-primary-light);
   }
 }
 
-.name.completed {
-  text-decoration: line-through;
+.checkbox {
+  @apply mt-[5px];
+}
+
+.div-task {
+  @apply w-full;
+}
+
+.name {
+  all: unset;
+  @apply block w-full;
+
+  &.completed {
+    text-decoration: line-through;
+  }
+}
+
+.description {
+  @apply block p-0 w-full;
+  background: none;
+  color: var(--color-placeholder);
+  resize: none;
+
+  &.completed {
+    text-decoration: line-through;
+  }
 }

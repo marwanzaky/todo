@@ -1,0 +1,5 @@
+<form [formGroup]="form" (ngSubmit)="add()">
+    <input id="name" type="text" placeholder="Name" formControlName="name">
+    <input id="description" type="text" placeholder="Description" formControlName="description">
+    <app-button-full [type]="'submit'" [disabled]="form.invalid">Add task</app-button-full>
+</form>
