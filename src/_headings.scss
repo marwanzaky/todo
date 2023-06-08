@@ -1,0 +1,33 @@
+h1 {
+  color: $color-black;
+  margin-bottom: 30px;
+
+  // text-transform: uppercase;
+  font-weight: var(--font-regular);
+  font-size: 250%;
+  line-height: 100%;
+
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+
+h2 {
+  @apply text-center md:text-left;
+
+  font-size: 150%;
+  // text-transform: uppercase;
+  font-weight: var(--font-regular);
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 120%;
+  font-weight: var(--font-regular);
+  margin-bottom: 5px;
+}
+
+h4 {
+  font-size: 100%;
+  font-weight: var(--font-bold);
+  margin-bottom: 20px;
+}

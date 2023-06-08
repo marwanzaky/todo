@@ -1,7 +1,9 @@
+<h1>Inbox</h1>
+
 <form class="addTask" [formGroup]="addTaskForm" (ngSubmit)="addTask()">
-  <input id="name" type="text" placeholder="name" formControlName="name">
-  <input id="description" type="text" placeholder="description" formControlName="description">
-  <app-button-full [type]="'submit'" [disabled]="addTaskForm.invalid">add task</app-button-full>
+  <input id="name" type="text" placeholder="Name" formControlName="name">
+  <input id="description" type="text" placeholder="Description" formControlName="description">
+  <app-button-full [type]="'submit'" [disabled]="addTaskForm.invalid">Add task</app-button-full>
 </form>
 
 <div class="tasks">

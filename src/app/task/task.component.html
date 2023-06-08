@@ -1,6 +1,4 @@
 <input type="checkbox" [(ngModel)]="task!.completed">
 
-<div class="task">
-    <div class="task-name" [class.completed]="task!.completed">{{task!.name}}</div>
-    <div class="task-description" [class.completed]="task!.completed">{{task?.description}}</div>
-</div>
+<div class="name" [class.completed]="task!.completed">{{task!.name}}</div>
+<!-- <div class="description" [class.completed]="task!.completed">{{task?.description}}</div> -->

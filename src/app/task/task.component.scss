@@ -1,26 +1,20 @@
 @import './../../variables';
 
 :host {
-  @apply p-[5px] flex gap-[5px];
+  @apply p-[0px] flex gap-[5px];
+  border-radius: $border-radius;
 
   &:hover {
-    @apply pl-[10px];
+    @apply pl-[5px];
     background-color:$color-primary-light;
+  }
+
+  &.selected {
+    @apply pl-[5px];
+    background-color: $color-primary;
   }
 }
 
-:host.selected {
-  background-color: $color-primary;
-}
-
-.task-name.completed, .task-description.completed {
+.name.completed {
   text-decoration: line-through;
-}
-
-.task.name, .task-description {
-  @apply my-[-5px];
-}
-
-.task-description {
- color: grey;
 }
