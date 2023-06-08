@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-button-full',
   template: `
-  <button class="btn-base btn-full" type="{{type}}">
+  <button class="btn-base btn-full" type="{{type}}" [disabled]="disabled">
     <ng-content></ng-content>
   </button>
   `,
@@ -11,6 +11,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonFullComponent {
   @Input() type: string = 'button';
+  @Input() disabled: boolean = false;
 }
 
 @Component({

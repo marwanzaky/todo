@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 import { Task } from './task';
 
 @Component({
@@ -11,14 +13,20 @@ export class AppComponent {
   tasks: Task[] = [];
   selectedTask?: Task;
 
-  addTask(name: string, description: string): void {
+  addTaskForm = new FormGroup({
+    name: new FormControl('', [Validators.required]),
+    description: new FormControl('', [Validators.required])
+  });
+
+  addTask(): void {
     const newTask: Task = {
-      name,
-      description,
+      name: this.addTaskForm.value.name ?? '',
+      description: this.addTaskForm.value.description ?? '',
       completed: false
     };
 
     this.tasks.push(newTask);
+    this.addTaskForm.reset();
   }
 
   onSelect(task: Task): void {

@@ -1,11 +1,11 @@
 @import './../../variables';
 
 :host {
-  @apply flex gap-[5px];
+  @apply p-[5px] flex gap-[5px];
 
   &:hover {
-    background-color:$color-primary-dark;
-    padding-left: 5px;
+    @apply pl-[10px];
+    background-color:$color-primary-light;
   }
 }
 
@@ -13,8 +13,12 @@
   background-color: $color-primary;
 }
 
-.task-name.completed {
+.task-name.completed, .task-description.completed {
   text-decoration: line-through;
+}
+
+.task.name, .task-description {
+  @apply my-[-5px];
 }
 
 .task-description {

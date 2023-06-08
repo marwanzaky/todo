@@ -1,7 +1,7 @@
-<form class="addTask" (submit)="addTask(name.value,description.value); false;">
-  <input type="text" placeholder="name" required #name>
-  <input type="text" placeholder="description" required #description>
-  <app-button-full [type]="'submit'">add task</app-button-full>
+<form class="addTask" [formGroup]="addTaskForm" (ngSubmit)="addTask()">
+  <input id="name" type="text" placeholder="name" formControlName="name">
+  <input id="description" type="text" placeholder="description" formControlName="description">
+  <app-button-full [type]="'submit'" [disabled]="addTaskForm.invalid">add task</app-button-full>
 </form>
 
 <div class="tasks">

@@ -8,6 +8,10 @@
     background-color: $color-primary-dark;
   }
 }
+
+.btn-base:disabled {
+  opacity: 0.5;
+}
   
 .btn-full {
   border: $btn-line-width solid $color-primary;
