@@ -8,8 +8,10 @@
 
     <app-add-task></app-add-task>
 
-    <div class="tasks">
-        <app-task *ngFor="let task of tasks.reverse()" [task]="task" [currentTask]="selectedTask"
-            (selectedTask)="onSelect($event)" [class.selected]="task === selectedTask"></app-task>
-    </div>
+    <ul class="tasks">
+        <li *ngFor="let task of tasks.slice().reverse()">
+            <app-task [task]="task" [currentTask]="selectedTask" (selectedTask)="onSelect($event)"
+                [class.selected]="task === selectedTask"></app-task>
+        </li>
+    </ul>
 </div>
