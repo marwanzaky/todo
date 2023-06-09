@@ -20,6 +20,11 @@ export class MainComponent {
     this.tasks = this.taskService.getAllTasks();
   }
 
+  get user(): { email: string } {
+    const user = localStorage.getItem('user') ?? '';
+    return JSON.parse(user);
+  }
+
   onSelect(task: Task): void {
     this.selectedTask = task;
   }

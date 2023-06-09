@@ -8,6 +8,9 @@ import { ButtonFullComponent, ButtonGhostComponent } from './ui/button/button.co
 import { MenuComponent } from './menu/menu.component';
 import { MainComponent } from './main/main.component';
 import { AddTaskComponent } from './add-task/add-task.component';
+import { LoginComponent } from './login/login.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { AddTaskComponent } from './add-task/add-task.component';
     ButtonGhostComponent,
     MenuComponent,
     MainComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

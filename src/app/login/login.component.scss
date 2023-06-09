@@ -1,0 +1,19 @@
+.login {
+  @apply w-screen h-screen flex justify-center items-center;
+}
+
+.content {
+  @apply w-[200px];
+}
+
+form {
+  @apply flex flex-col gap-y-[5px];
+
+  app-button-full {
+    @apply block;
+  }
+  
+  input {
+    @apply block;
+  }
+}
