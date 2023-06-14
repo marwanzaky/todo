@@ -17,14 +17,14 @@ export class AddTaskComponent {
     description: new FormControl('', [Validators.required])
   });
 
-  add(): void {
+  async add(): Promise<void> {
     const newTask: Task = {
       name: this.form.value.name ?? '',
       description: this.form.value.description ?? '',
       completed: false
     };
 
-    this.taskService.addTask(newTask);
+    await this.taskService.addTask(newTask);
     this.form.reset();
   }
 }

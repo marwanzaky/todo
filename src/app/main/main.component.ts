@@ -17,7 +17,7 @@ export class MainComponent {
   selectedTask?: Task;
 
   constructor() {
-    this.tasks = this.taskService.getAllTasks();
+    this.taskService.getAllTasks().then((tasks: Task[]) => this.tasks = tasks);
   }
 
   get user(): { email: string } {

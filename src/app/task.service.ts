@@ -5,31 +5,25 @@ import { Task } from './task';
   providedIn: 'root'
 })
 export class TaskService {
-  tasks: Task[] = [
-    {
-      name: 'Buy groceries: Milk, eggs, bread, and fruits.',
-      description: 'Ensure you have essential food items by purchasing milk, eggs, bread, and a variety of fruits for the week.',
-      completed: false
-    },
-    {
-      name: 'Finish report for the meeting with the client.',
-      description: 'Compile and complete the report that needs to be presented during the upcoming meeting with the client.',
-      completed: false
-    },
-    {
-      name: 'Call the doctor\'s office to schedule an appointment.',
-      description: 'Contact the doctor\'s office to book an appointment for a medical check- up or consultation.',
-      completed: false
-    }
-  ];
+  url = 'https://todo-api-stage.up.railway.app/tasks';
 
-  constructor() { }
-
-  getAllTasks(): Task[] {
-    return this.tasks;
+  async getAllTasks(): Promise<Task[]> {
+    const res = await fetch(this.url);
+    return await res.json() ?? [];
   }
 
-  addTask(task: Task) {
-    this.tasks.push(task);
+  async addTask(task: Task): Promise<void> {
+    const options: RequestInit = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(task)
+    }
+
+    const res = await fetch(this.url, options);
+    const json = await res.json();
+
+    console.log('New task created', json);
   }
 }
